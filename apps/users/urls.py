@@ -1,7 +1,9 @@
-from django.conf.urls import url,include
+from django.conf.urls import url
 
 from apps.users import views
 
-urlspattern = [
-    url(r'register',views.register)
+urlpatterns = [
+    url(r'^register$',views.register,name='register'),
+    url(r'^do_register$',views.do_register,name='do_register'),
+
 ]
